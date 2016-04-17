@@ -25,7 +25,7 @@
 #define ScrStateMachine
 ///ScrStateMachine( interface, state-scr0, state-scr1, state-scr2, ... )
    var StateMachineInterface = argument[$00],
-      StateMachine = DSGRID(PARAM_ARRAY, $02);
+      StateMachine = ds_grid_create(PARAM_ARRAY, $02);
    StateMachine[# $00, STATEMACHINE_CAPTURE] = $00;
    StateMachine[# $00, STATEMACHINE_STATES] = DSLIST();
    
