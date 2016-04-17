@@ -13,29 +13,29 @@ Uses:
  - Generic operations such as: copy, destroy, clone, etc.
 
 --
-#####DSOBJECT( type, width[undefined], height[undefined] )
+#####DSOBJECT(type, width[undefined], height[undefined])
 Constructs a DS Object of the specified type encapsulated in an array with the stored type. If a DS Grid is created the optional `width` and `height` parameters become mandatory.
   
 --
-#####DSTYPE( ds-object )
+#####DSTYPE(ds-object)
 Returns the specified type of the `ds-object` unless the passed object is not a `valid ds-object`, in which case `undefined` is returned.
   
 --
-#####DSGET( ds-object )
+#####DSGET(ds-object)
 Returns the specified data structure of the `ds-object` unless the passed object is not a `valid ds-object`, in which case `undefined` is returned.
 
 --
-#####DSISVALID( ds-object )
+#####DSISVALID(ds-object)
 Returns true if the `ds-object` is a valid `DS Object` else false.
 
 --
-#####DSCOPY( ds-obj-srce, ds-obj-dest )
+#####DSCOPY(ds-obj-srce, ds-obj-dest)
 Copies the contents of one data structure from one `ds-object` to the next. The `dest` or destination DS Object will be returned. If the types of the `ds-objects` do not match, the script will silently not clone the object.
 
 --
-#####DSCLONE( ds-object )
+#####DSCLONE(ds-object)
 Creates a new clone from the passed `DS Object`.
 
 --
-#####DSFREE( ds-object )
+#####DSFREE(ds-object)
 Destroys--frees from memory--the data structure encapsulated in the `DS Object`.
