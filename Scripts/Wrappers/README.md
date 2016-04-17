@@ -1,6 +1,8 @@
 ####A collection of scripts that wrap built in DS functions.
 With the exception of the DS Object scripts., the point of these scripts is not to be useful, but streamlined and easier/faster to type out. E.g. DSLIST() is faster to type out than ds_list_create().
 
+NOTE: The `clone` and `copy` scripts return the destination `ds-object` whereas ds_*_copy() does not.
+
 --
 #####DS Object
 The DS Object is an array encapsulation of the built in data structures in order to build a generic holder for the encapsulated data structure. The array is a length of two where `index-0` is the data structure and `index-1` is the type of the data structure.
