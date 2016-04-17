@@ -1,12 +1,12 @@
 ###A collection of scripts to work with window and view systems.
 The following link redirects to the [Window & View Systems](https://github.com/FatalSleep/GML-Window-System) repository.
 
-The script `ScrDrawSurfaceExt` was written by [@Braffolk](https://twitter.com/braffolk) on Twitter.
-
 These systems were designed to be an overlay of the existing window and view sytsems in GameMaker which are lacking in features and usability.
 
 --
-### GML-Window-System
+# GML-Window-System
+The script `ScrDrawSurfaceExt` was written by [@Braffolk](https://twitter.com/braffolk) on Twitter.
+
 A simple system for handling window and view resizing in GM.
 
 Window / View scaling. The window system allows you to handle scaling for the window and view. The view scaling functions by multiplying the view width/height by a factor of x. While the window scaling doesn't exactly do this... The window scaling doesn't affect the window size, but rather the window draw size, e.g. the size of the application_surface when drawn. So if you have an absolute window and view of size 640x480 and set the window scaling to 0.5, the application surface will be drawn to the window at half size. The view will remain at 640x480, but will be drawn scaled down to half the size--320x240.
