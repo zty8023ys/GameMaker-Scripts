@@ -85,4 +85,3 @@
       Clone = ds_map_create();
    ds_map_copy(Clone, argument[$00]);
    return Clone;
-
