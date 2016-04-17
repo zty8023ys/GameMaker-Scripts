@@ -1,0 +1,2 @@
+DS_OBJECT=$00
+DS_TYPE=$01
