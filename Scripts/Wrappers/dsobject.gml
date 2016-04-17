@@ -3,8 +3,8 @@
    var ds = argument[$00];
    
    if (is_array(ds)) {
-      if (ds_exists(ds[@ DS_OBJECT], ds[@ DS_TYPE])) {
-         return ds[@ DS_TYPE];
+      if (ds_exists(ds[@ $00], ds[@ $01])) {
+         return ds[@ $01];
       }
    }
    
@@ -49,12 +49,12 @@
    var ds = argument[$00];
    
    if (is_array(ds)) {
-      if (ds_exists(ds[@ DS_OBJECT], ds[@ DS_TYPE])) {
-         return TY_TRUE;
+      if (ds_exists(ds[@ $00], ds[@ $01])) {
+         return true;
       }
    }
    
-   return TY_FALSE;
+   return false;
 
 #define DSCLONE
 ///DSCLONE( ds-object )
@@ -63,10 +63,10 @@
    if (is_undefined(ds) || !DSISVALID(ds))
       return $00;
       
-   var type = ds[@ DS_TYPE],
+   var type = ds[@ $01],
       clone = IF(type != ds_type_grid, DSOBJECT(type), $00),
-      object = ds[@ DS_OBJECT],
-      cloneobject = clone[@ DS_OBJECT];
+      object = ds[@ $00],
+      cloneobject = clone[@ $00];
    
    switch(type) {
       case ds_type_list:
@@ -96,7 +96,7 @@
 ///DSCLONE( ds-object, ds-object )
    var srce = argument[$00], dest = argument[$01];
    
-   if (is_undefined(ds) || !DSISVALID(ds))
+   if (is_undefined(ds) || !DSISVALID(ds) || srce[@ $01] == dest[@ $01])
       return $00;
    
    switch(srce[@ DS_TYPE]) {
@@ -131,22 +131,22 @@
    
    switch(ds[@ DS_TYPE]) {
       case ds_type_list:
-         ds_list_destroy(ds[@ DS_OBJECT]);
+         ds_list_destroy(ds[@ $00]);
       break;
       case ds_type_grid:
-         ds_grid_destroy(ds[@ DS_OBJECT]);
+         ds_grid_destroy(ds[@ $00]);
       break;
       case ds_type_map:
-         ds_map_destroy(ds[@ DS_OBJECT]);
+         ds_map_destroy(ds[@ $00]);
       break;
       case ds_type_queue:
-         ds_queue_destroy(ds[@ DS_OBJECT]);
+         ds_queue_destroy(ds[@ $00]);
       break;
       case ds_type_stack:
-         ds_stack_destroy(ds[@ DS_OBJECT]);
+         ds_stack_destroy(ds[@ $00]);
       break;
       case ds_type_priority:
-         ds_priority_destroy(ds[@ DS_OBJECT]);
+         ds_priority_destroy(ds[@ $00]);
       break;
    }
 
@@ -155,7 +155,6 @@
    var ds = argument[$00];
    
    if (DSISVALID(ds))
-      return ds[@ DS_OBJECT];
+      return ds[@ $00];
    
-   return TY_UNDEFINED;
-
+   return undefined;
