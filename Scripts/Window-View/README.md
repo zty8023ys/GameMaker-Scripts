@@ -1,6 +1,7 @@
 #A collection of scripts to work with window and view systems.
-
 The following link redirects to the [Window & View Systems](https://github.com/FatalSleep/GML-Window-System) repository.
+
+The script `ScrDrawSurfaceExt` was written by [@Braffolk](https://twitter.com/braffolk) on Twitter.
 
 These systems were designed to be an overlay of the existing window and view sytsems in GameMaker which are lacking in features and usability.
 
