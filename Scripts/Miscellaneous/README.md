@@ -33,3 +33,5 @@ NOTE: If the repeats argument is not passed to the script, the timer will repeat
 --
 #####ScrTimerRun( timer )
 Executes a timer by incrementing the current iteration until it reaches the total number of iterations. This will repeat until the number of repeats reaches zero unless the number of repeats is infinite.
+
+This script will return `true` until the timer has completed, else `false`.
