@@ -75,4 +75,3 @@
 ///DSPRIORITYFINDWEIGHT( priority, weight )
    gml_pragma("forceinline");
    ds_priority_find_priority(argument[$00], argument[$01]);
-
