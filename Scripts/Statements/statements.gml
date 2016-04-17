@@ -5,8 +5,12 @@
 
 #define FOR
 ///FOR( start, end, increment, script, params[undefined], dispose[false] )
-   var params = IF(argument_count == $05, argument[$04], undefined),
-      dispose = IF(argument_count == $06, argument[$05], false);
+   var params = undefined, dispose = false;
+   
+   if (argument_count >= $05)
+      params = argument[$04];
+   if (argument_count >= $06)
+      dispose = argument[$05];
    
    for(var xx = argument[$00]; xx < argument[$01]; xx += argument[$02])
       script_execute(argument[$03], xx, params);
@@ -17,7 +21,10 @@
 #define FOREACH
 ///FOREACH( script, list, dispose[false] )
    var list = argument[$01],
-      dispose = IF(argument_count == $03, argument[$02], false);
+      dispose = false;
+      
+   if (argument_count == $03)
+      dispose = argument[$02];
    
    for(var xx = $00; xx < ds_list_size(list); xx++)
       script_execute(argument[$00], list[| xx], list);
@@ -27,8 +34,12 @@
 
 #define FOR2D
 ///FOR2D( x-begin, x-end, x-increment, y-begin, y-end, y-increment, script, params[undefined], dispose[false] )
-   var params = IF(argument_count == $08, argument[$07], undefined),
-      dispose = IF(argument_count == $09, argument[$08], false);
+   var params = undefined, dispose = false;
+   
+   if (argument_count >= $08)
+      params = argument[$07];
+   if (argument_count >= $09)
+      dispose = argument[$08];
    
    for(var yy = argument[$03]; yy < argument[$04]; yy += argument[$05])
       for(var xx = argument[$00]; xx < argument[$01]; xx += argument[$02])
