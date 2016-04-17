@@ -37,6 +37,10 @@ Executes a timer by incrementing the current iteration until it reaches the tota
 This script will return `true` until the timer has completed, else `false`.
 
 --
+#####ScrTimerSet(timer, length, repeats[infinite])
+Sets the timer to the new length and repeat configurations and resets the timer's iterator to zero. 
+
+--
 #####ScrClampRadialX(x1, x2, rad)
 #####ScrClampRadialY(y1, y2, rad)
 These two scripts are meant to be used in unison with eachother. Together these scripts take a single point `x1,y1` and clamp them within a circle around a point `x2,y2` with a given radius `rad`. This basically constricts a point to the bounds of a circle similar to if you did the same thing via a rectangle: `x1 = median(x2, x1, x3); y1 = median(y2, y1, y3);`. This is useful for things like virtual joy-sticks where the joy-stick cannot move around it's circular area of movement/rotation.
