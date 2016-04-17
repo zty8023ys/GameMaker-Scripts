@@ -35,3 +35,15 @@ NOTE: If the repeats argument is not passed to the script, the timer will repeat
 Executes a timer by incrementing the current iteration until it reaches the total number of iterations. This will repeat until the number of repeats reaches zero unless the number of repeats is infinite.
 
 This script will return `true` until the timer has completed, else `false`.
+
+--
+#####ScrClampRadialX(x1, x2, rad)
+#####ScrClampRadialY(y1, y2, rad)
+These two scripts are meant to be used in unison with eachother. Together these scripts take a single point `x1,y1` and clamp them within a circle around a point `x2,y2` with a given radius `rad`. This basically constricts a point to the bounds of a circle similar to if you did the same thing via a rectangle: `x1 = median(x2, x1, x3); y1 = median(y2, y1, y3);`. This is useful for things like virtual joy-sticks where the joy-stick cannot move around it's circular area of movement/rotation.
+
+Say we're given the mouse as a point `mx, my` and a circle `cx,cy,cr`. Using these scripts we'd get:
+```
+px = ScrRadialClampX(mx, cx, cr);
+py = ScrRadialClampX(my, cy, cr);
+```
+Where point `px,py` would follow the mouse `mx,my` within the circle `cx,cy,cr`, however when the mouse `mx,my` is outside of the circle `cx,cy,cr` then point `px,py` would still point towards the mouse `mx,my`.
