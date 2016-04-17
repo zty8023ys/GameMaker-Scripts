@@ -56,7 +56,7 @@
    return Timer;
 
 #define ScrTimerRun
-///ScrTimerRun( array )
+///ScrTimerRun( timer )
    // DESCRIPTION: Executes a timer when called.
    // RETURNS: True if the timer has finished, else false.
    var Timer = argument[$00];
@@ -72,6 +72,22 @@
       Timer[# $00, $02] --;
    
    return false;
+   
+#define ScrTimerSet
+///ScrTimerSet( timer, length, repeat[infinite] )
+   // DESCRIPTION: Sets the timer to the new configurations.
+   var Timer = argument[$00];
+   Timer[# $00, $00] = $00;
+   Timer[# $00, $01] = argument[$01];
+   
+   switch(argument_count) {
+      case $03:
+          Timer[# $00, $02] = argument[$01];
+      break;
+      default:
+          Timer[# $00, $02] = undefined;
+      break;
+   }
 
 #define ScrClampRadialX
 ///ScrClampRadialX( x1, x2, r )
