@@ -27,7 +27,7 @@
    var StateMachineInterface = argument[$00],
       StateMachine = ds_grid_create($01, $02);
    StateMachine[# $00, STATEMACHINE_CAPTURE] = $00;
-   StateMachine[# $00, STATEMACHINE_STATES] = DSLIST();
+   StateMachine[# $00, STATEMACHINE_STATES] = ds_list_create();
    
    for(var i = $01; i < argument_count; i++)
       ds_list_add(StateMachine, argument[i]);
