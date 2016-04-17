@@ -5,6 +5,8 @@ NOTE: The `clone` and `copy` scripts return the destination `ds-object` or `data
 
 --
 #####DS Object
+NOTE: DS Object relies on the rest of the DS wrapper scripts and the macros in the `dsobject_macros.txt` file.
+
 The DS Object is an array encapsulation of the built in data structures in order to build a generic holder for the encapsulated data structure. The array is a length of two where `index-0` is the data structure and `index-1` is the type of the data structure.
 
 Uses:
