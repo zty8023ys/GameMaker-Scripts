@@ -78,10 +78,3 @@
    }
    
    return inside;
-
-#define ScrRayIntersectRay
-///ScrRayIntersectRay(x1,y1,x2,y2,x3,y3,x4,y4);
-   var a , b;
-   a = sign(argument2 - argument0) - sign(argument3 - argument1);
-   b = sign(argument6 - argument4) - sign(argument7 - argument5);
-   return ((a > b) * 1) + ((a == b) * 0) + ((a < b) * 1);
