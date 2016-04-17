@@ -72,3 +72,15 @@
       Timer[# $00, $02] --;
    
    return false;
+
+#define ScrClampRadialX
+///ScrClampRadialX( x1, x2, r )
+   var point = point_direction(argument[$01], $00, argument[$00], $00),
+      xradialmax = argument[$01] + lengthdir_x(argument[$02], point);
+   return median(argument[$01], argument[$00], xradialmax);
+   
+#define ScrClampRadialY
+///ScrClampRadialY( y1, y2, r )
+   var point = point_direction($00, argument[$01], $00, argument[$00]),
+      yradialmax = argument[$01] + lengthdir_y(argument[$02], point);
+   return median(argument[$01], argument[$00], yradialmax);
