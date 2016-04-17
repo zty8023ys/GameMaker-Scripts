@@ -1,4 +1,4 @@
-####A collections of scripts mimicing statements/functions in GML.
+###A collections of scripts mimicing statements/functions in GML.
 NOTE: FOR(), FOR2D() and FOREACH() rely on the IF() script. However this can be removed by replacing with a normal if-statement.
 
 --
