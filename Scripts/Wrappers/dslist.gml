@@ -62,6 +62,6 @@
 #define DSLISTCLONE
 ///DSLISTCLONE( srce )
    var List = argument[$00],
-      Clone = DSLIST();
+      Clone = ds_list_create();
    ds_list_copy(Clone,argument[$00]);
    return Clone;
