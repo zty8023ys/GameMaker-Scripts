@@ -14,7 +14,7 @@ Uses:
 
 --
 #####DSOBJECT( type, width[undefined], height[undefined] )
-Constructs a DS Object of the specified type encapsulated in an array with the stored type. If a DS Grid is create the optional `width` and `height` parameters become mandatory.
+Constructs a DS Object of the specified type encapsulated in an array with the stored type. If a DS Grid is created the optional `width` and `height` parameters become mandatory.
   
 --
 #####DSTYPE( ds-object )
