@@ -3,7 +3,7 @@ With the exception of the DS Object scripts., the point of these scripts is not 
 
 --
 #####DS Object
-The DS Object is an array encapsulation of the built in data structure in order to build a generic holder for the encapsulated data structure. The array is a length of two where `index-0` is the data structure and `index-1` is the type of the data structure.
+The DS Object is an array encapsulation of the built in data structures in order to build a generic holder for the encapsulated data structure. The array is a length of two where `index-0` is the data structure and `index-1` is the type of the data structure.
 
 Uses:
  - Generic data structure integrity checking.
