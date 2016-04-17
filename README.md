@@ -4,7 +4,7 @@ A collection of reusable scripts for GameMaker: Studio.
 
 #Favorites
 #####DS Object
-The DS Object scripts are great for encapsulating the GameMaker data structures as generic objects with their stored type. This means you can write scripts to perform generic operations that are possibly across all of the data structures without having to specify which type of data structure is begin passed. The DS Objects are encapsulated in an array of length 2 where `index-0` is the data structure and `index-1` is the type of that data structure: `ds_type_list, ds_type_grid, ds_type_map, ds_type_queue, ds_type_stack, ds_type_priority`.
+The DS Object scripts are great for encapsulating the GameMaker data structures as generic objects with their stored type. This means you can write scripts to perform generic operations that are possible across all of the data structures without having to specify which type of data structure is begin passed. The DS Objects are encapsulated in an array of length 2 where `index-0` is the data structure and `index-1` is the type of that data structure: `ds_type_list, ds_type_grid, ds_type_map, ds_type_queue, ds_type_stack, ds_type_priority`.
 
 --
 #####IF(expression, true-result, false-result)
