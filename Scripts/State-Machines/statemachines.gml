@@ -21,8 +21,12 @@
 #define ScrStateMachineInvoke
 ///ScrStateMachineInvoke( state-machine, params[undefined] )
    var StateMachine = argument[$00],
-      StateList = StateMachine[# $01];
-   script_execute(StateList[| StateMachine[# $00]], argument[$01]);
+      StateList = StateMachine[# STATEMACHINE_STATES];
+   
+   if (argument_count == $01)
+      script_execute(StateList[| StateMachine[# STATEMACHINE_CAPTURE]]);
+   else
+      script_execute(StateList[| StateMachine[# STATEMACHINE_CAPTURE]], argument[$01]);
 
 #define ScrStateMachineInterfaceDispose
 ///ScrStateMachineInterfaceDispose( interface )
